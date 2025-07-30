@@ -51,7 +51,8 @@ function calculateInvestment(data: InvestmentData): CalculationLimit {
 
     return annualResults;
 }
-// this function to print results
+// Prints the results of the investment calculation
+// If the result is an error message, it prints the message instead.
 
 function PrintResults(results: CalculationLimit) {
     if (typeof results === 'string') {

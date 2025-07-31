@@ -60,10 +60,9 @@ function PrintResults(results: CalculationLimit) {
         return;
     }
 
-    for (const yearEndResult of results) {
-        console.log(yearEndResult.year);
-        console.log(`Total: ${yearEndResult.totalAmount.toFixed(0)}`);
-    }
+    results.forEach(({ year, totalAmount, totalInterestEarned, totalContributions }) => {
+        console.log(`${year}: Total = ${totalAmount.toFixed(0)}, Interest Earned = ${totalInterestEarned.toFixed(0)}, Contributions = ${totalContributions.toFixed(0)}`);
+    });
 }
 
 const investmentData: InvestmentData =
